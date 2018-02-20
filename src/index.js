@@ -69,8 +69,8 @@ class Routes {
     }
   }
 
-  getRequestHandler (app, customHandler) {
-    const nextHandler = app.getRequestHandler()
+  getRequestHandler (app, customHandler, customNexthandler) {
+    const nextHandler = customNexthandler || app.getRequestHandler()
 
     return (req, res) => {
       const {route, query, parsedUrl} = this.match(req.url)

@@ -125,6 +125,7 @@ describe('Request handler', () => {
     routes.getRequestHandler(app)(req, res)
     expect(app.getRequestHandler()).toBeCalledWith(req, res, parsedUrl)
   })
+
 })
 
 describe('Link', () => {
